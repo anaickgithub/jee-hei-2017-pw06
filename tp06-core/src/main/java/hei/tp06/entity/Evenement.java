@@ -1,7 +1,7 @@
 package hei.tp06.entity;
 
-import java.util.Date;
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * Created by Anaïck on 14/02/2017.
@@ -11,7 +11,7 @@ public class Evenement {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private long id;
     private Date start;
     private Date end;
     @Column(name="title")
@@ -31,11 +31,11 @@ public class Evenement {
         this.description = description;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
