@@ -19,7 +19,7 @@ import java.util.Properties;
  * Created by Anaïck on 14/02/2017.
  */
 @Configuration
-@EnableJpaRepositories(basePackages = "hei.tp06.core.dao")
+@EnableJpaRepositories(basePackages = "hei.tp06.dao")
 public class DBConfig {
 
     @Bean(destroyMethod = "close")
@@ -62,7 +62,7 @@ public class DBConfig {
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(vendorAdapter);
         factory.getJpaPropertyMap().put("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
-        factory.setPackagesToScan("hei.tp06.core.entity");
+        factory.setPackagesToScan("hei.tp06.entity");
         factory.setDataSource(dataSource);
         factory.afterPropertiesSet();
         return factory.getObject();

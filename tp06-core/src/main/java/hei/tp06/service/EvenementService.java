@@ -9,9 +9,9 @@ import java.util.List;
  */
 public interface EvenementService {
 
-    List<Evenement> listAllEvenements();
+    List<Evenement> findAll();
 
-    Evenement getEvenement(long id);
+    Evenement findOneById(long id);
 
-    void saveEvenement(Evenement evenement);
+    void save(Evenement evenement);
 }

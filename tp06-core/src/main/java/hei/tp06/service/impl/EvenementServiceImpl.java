@@ -19,15 +19,15 @@ public class EvenementServiceImpl implements EvenementService{
     @Inject
     private EvenementDAO evenementDAO;
 
-    public List<Evenement> listAllEvenements() {
-        return evenementDAO.listAllEvenements();
+    public List<Evenement> findAll() {
+        return evenementDAO.findAll();
     }
 
-    public Evenement getEvenement(long id) {
-        return evenementDAO.getEvenement(id);
+    public Evenement findOneById(long id) {
+        return evenementDAO.findOneById(id);
     }
 
-    public void saveEvenement(Evenement evenement) {
+    public void save(Evenement evenement) {
         evenementDAO.save(evenement);
     }
 }

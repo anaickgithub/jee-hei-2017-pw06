@@ -13,7 +13,7 @@ import java.util.Properties;
  * Created by Anaïck on 14/02/2017.
  */
 @Configuration
-@ComponentScan({ "hei.tp06.core.service" })
+@ComponentScan({ "hei.tp06.service" })
 public class AppConfig {
 
     private final static Logger LOGGER = LoggerFactory.getLogger(AppConfig.class);

@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface EvenementDAO extends JpaRepository<Evenement,Long>{
 
-    List<Evenement> listAllEvenements();
+    List<Evenement> findAll();
 
-    Evenement getEvenement(long id);
+    Evenement findOneById(long id);
 }
