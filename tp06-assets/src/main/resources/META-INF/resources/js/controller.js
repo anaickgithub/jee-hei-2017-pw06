@@ -153,7 +153,7 @@ function CalendarCtrl($scope,$compile,uiCalendarConfig,EvenementsWS) {
         	EvenementsWS.get({id:event.id}).$promise.then(function(data){
         		var modalInstance = $modal.open({
         		      templateUrl: 'myModalContent.html',
-        		      controller: 'ModalInstanceCtrl',
+        		      config: 'ModalInstanceCtrl',
         		      resolve: {
         		        content: function () {
         		          return data.description;
