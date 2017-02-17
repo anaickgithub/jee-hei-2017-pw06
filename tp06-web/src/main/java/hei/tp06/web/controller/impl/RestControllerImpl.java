@@ -8,7 +8,6 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 import java.util.List;
 
 /**
@@ -32,7 +31,13 @@ public class RestControllerImpl implements RestController {
     @GET
     @Path("/evenements/{idevenement}")
     public Evenement getEvenement(@PathParam("idevenement") Long id) {
-        return evenemenentService.findOneById(id);
+        return evenemenentService.findById(id);
+    }
+
+    @POST
+    @Path("/evenements")
+    public void postEvenement(Evenement evenement) {
+        evenemenentService.saveEvenement(evenement);
     }
 
 }

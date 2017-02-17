@@ -11,7 +11,7 @@ public interface EvenementService {
 
     List<Evenement> findAll();
 
-    Evenement findOneById(long id);
+    Evenement findById(long id);
 
-    void save(Evenement evenement);
+    void saveEvenement(Evenement evenement);
 }

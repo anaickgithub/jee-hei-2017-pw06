@@ -23,11 +23,11 @@ public class EvenementServiceImpl implements EvenementService{
         return evenementDAO.findAll();
     }
 
-    public Evenement findOneById(long id) {
+    public Evenement findById(long id) {
         return evenementDAO.findOneById(id);
     }
 
-    public void save(Evenement evenement) {
+    public void saveEvenement(Evenement evenement) {
         evenementDAO.save(evenement);
     }
 }
